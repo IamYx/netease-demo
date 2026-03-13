@@ -1,0 +1,85 @@
+
+// Copyright (c) 2022 NetEase, Inc. All rights reserved.
+// Use of this source code is governed by a MIT license that can be
+// found in the LICENSE file.
+
+"open_push"="Please open the push in the setting";
+"message"="Message";
+"qchat"="QChat";
+"contact"="Contacts";
+"mine"="Me";
+"logout"="Log out";
+"account_Cancellation" = "Delete Account";
+"about_yunxin"="About CommsEase";
+"want_to_logout"="Sure to log out?";
+"want_to_delete_account"="Sure to delete account?";
+"person_info"="My Proflie";
+"setting_birthday_failure"="Set birthday Failed";
+"setting_head_failure"="Set Avatar Failed";
+"setting_nickname_failure"="Set Nick Name Failed";
+"male"="Male";
+"female"="Female";
+"change_gender_failure"="Set Sex Failed";
+"change_phone_failure"="Set mobile Failed";
+"change_email_failure"="Set e-mail Failed";
+"change_sign_failure"="Set What's up Failed";
+"birthday"="Birthday";
+"phone"="Mobile";
+"email"="E-mail";
+"sign_remind"="sign remind";
+
+"complete"="Complete";
+"save"="Save";
+"message_remind"="Notification";
+"style_selection"="Skin";
+"app_language"="Language";
+"app_language_zh"="中文";
+"app_language_en"="English";
+"product_intro"="Product Introduction";
+"receiver_mode"="Handset Mode";
+"message_read_function"="Read/Unread";
+"cloud_conversation"="Cloud Conversation Mode";
+"restart_tips"="Restart effective, whether to exit?";
+"version"="Version";
+"headImage"="Avatar";
+"nickname"="Nick Name";
+"account"="ID";
+"gneder"="Sex";
+"unknown"="Unknown";
+"individuality_sign"="What's up";
+"new_message_remind"="message notification";
+"ring_mode"="Ring mode";
+"vibration_mode"="Vibration mode";
+"display_message_detail"="displays the details in notification bar";
+"setting"="Setting";
+"real_service"="Truly Stable IM Product";
+"appName"="CommsEase IM";
+"brand_des"="CommsEase";
+"im_version"="IM Version";
+"register_login"="register/login";
+"email_login"="Email Login";
+"node_select"="Select Node";
+"change_node"="Change Node";
+"restart_take_effect"="The app will exit after switching nodes and take effect after restarting";
+"domestic_node"="China";
+"overseas_node"="Singapore";
+"restart"="OK";
+"exit"="Exit";
+"text_count_limit"="limit %d characters";
+
+// style
+"style_default"="Base Skin";
+"style_fun"="Common Skin";
+
+"mine_collection"="Collection";
+
+"anti_error"="Unsafe content detected. Please rephrase.";
+
+"privatized_configuration"="Privatized configuration";
+"login_by_account"="login";
+"security_warning"="For test only. Beware of money transfer, lottery winnings & strange call scams.";
+"login_token_expired"="Session expired. Please login again.";
+"account_forbidden"="User Banned";
+"account_kicked_offline"="Your session was revoked";
+
+"click_to_report"="Click Report";
