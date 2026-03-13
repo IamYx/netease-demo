@@ -4,7 +4,7 @@ iOS端demo
   
     含ui demo
     
-      nim uikit
+      nim uikit(指定nimsdk版本)
       
     不含ui demo
     
