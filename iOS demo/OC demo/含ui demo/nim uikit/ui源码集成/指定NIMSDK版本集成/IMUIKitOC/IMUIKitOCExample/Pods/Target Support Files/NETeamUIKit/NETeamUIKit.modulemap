@@ -1,6 +1,0 @@
-framework module NETeamUIKit {
-  umbrella header "NETeamUIKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

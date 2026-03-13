@@ -1,6 +1,0 @@
-framework module NELocalConversationUIKit {
-  umbrella header "NELocalConversationUIKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
