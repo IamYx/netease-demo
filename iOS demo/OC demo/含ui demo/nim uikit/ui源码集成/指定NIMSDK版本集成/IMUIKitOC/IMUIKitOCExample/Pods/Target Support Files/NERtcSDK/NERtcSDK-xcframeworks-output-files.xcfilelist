@@ -1,0 +1,3 @@
+${PODS_XCFRAMEWORKS_BUILD_DIR}/NERtcSDK/Nenn/NERtcnn.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/NERtcSDK/RtcBasic/NERtcSDK.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/NERtcSDK/Segment/NERtcPersonSegment.framework

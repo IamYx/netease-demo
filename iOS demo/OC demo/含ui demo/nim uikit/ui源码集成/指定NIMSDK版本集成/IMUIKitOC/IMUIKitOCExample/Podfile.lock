@@ -1,0 +1,184 @@
+PODS:
+  - CocoaLumberjack (3.9.0):
+    - CocoaLumberjack/Core (= 3.9.0)
+  - CocoaLumberjack/Core (3.9.0)
+  - LGAlertViewCY (3.0.0)
+  - libwebp (1.5.0):
+    - libwebp/demux (= 1.5.0)
+    - libwebp/mux (= 1.5.0)
+    - libwebp/sharpyuv (= 1.5.0)
+    - libwebp/webp (= 1.5.0)
+  - libwebp/demux (1.5.0):
+    - libwebp/webp
+  - libwebp/mux (1.5.0):
+    - libwebp/demux
+  - libwebp/sharpyuv (1.5.0)
+  - libwebp/webp (1.5.0):
+    - libwebp/sharpyuv
+  - Masonry (1.1.0)
+  - MJRefresh (3.7.9)
+  - NEChatKit/NOS_Special (10.9.10):
+    - NECommonKit (= 9.7.6)
+    - NECoreIM2Kit/NOS_Special (= 1.1.7)
+  - NEChatUIKit (10.9.10):
+    - MJRefresh
+    - NEChatKit/NOS_Special
+    - NECommonUIKit
+    - SDWebImageSVGKitPlugin
+    - SDWebImageWebPCoder
+  - NECommonKit (9.7.6):
+    - YXAlog
+  - NECommonUIKit (9.8.3):
+    - NECommonKit
+    - SDWebImage
+  - NEContactUIKit (10.9.10):
+    - MJRefresh
+    - NEChatKit/NOS_Special
+    - NECommonUIKit
+  - NECoreIM2Kit/NOS_Special (1.1.7):
+    - NECoreKit
+    - NIMSDK_LITE
+    - NIMSDK_LITE/FTS
+  - NECoreKit (9.8.1):
+    - YXAlog
+  - NELocalConversationUIKit (10.9.10):
+    - MJRefresh
+    - NEChatKit/NOS_Special
+    - NECommonUIKit
+  - NERtcCallKit/NOS_Special (3.5.0):
+    - NECommonKit
+    - NECoreKit
+    - NIMSDK_LITE
+    - YXAlog
+  - NERtcCallUIKit/NOS_Special (3.5.0):
+    - NECommonUIKit
+    - NERtcCallKit/NOS_Special
+    - SDWebImage
+  - NERtcSDK/Nenn (5.9.21)
+  - NERtcSDK/RtcBasic (5.9.21)
+  - NERtcSDK/Segment (5.9.21)
+  - NETeamUIKit (10.9.10):
+    - NEChatUIKit
+  - NIMSDK_LITE (10.9.76):
+    - NIMSDK_LITE/NOS (= 10.9.76)
+    - YXArtemis_XCFramework
+  - NIMSDK_LITE/FTS (10.9.76):
+    - YXArtemis_XCFramework
+  - NIMSDK_LITE/NOS (10.9.76):
+    - YXArtemis_XCFramework
+  - ReactiveObjC (3.1.1)
+  - SDWebImage (5.21.7):
+    - SDWebImage/Core (= 5.21.7)
+  - SDWebImage/Core (5.21.7)
+  - SDWebImageSVGKitPlugin (1.4.0):
+    - SDWebImage/Core (~> 5.10)
+    - SVGKit (~> 3.0)
+  - SDWebImageWebPCoder (0.15.0):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.17)
+  - SPPageMenu (3.5.0)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
+  - Toast (4.1.1)
+  - YXAlog (1.0.10)
+  - YXArtemis_XCFramework (1.1.6)
+  - YXLogin (1.1.0):
+    - LGAlertViewCY
+    - Masonry
+    - ReactiveObjC
+    - SPPageMenu
+    - Toast
+    - YYModel
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - NEChatKit/NOS_Special (= 10.9.10)
+  - NEChatUIKit (from `../NEChatUIKit/NEChatUIKit.podspec`)
+  - NECommonKit (= 9.7.6)
+  - NECommonUIKit (from `../NECommonUIKit/NECommonUIKit.podspec`)
+  - NEContactUIKit (from `../NEContactUIKit/NEContactUIKit.podspec`)
+  - NECoreIM2Kit/NOS_Special (= 1.1.7)
+  - NECoreKit (= 9.8.1)
+  - NELocalConversationUIKit (from `../NELocalConversationUIKit/NELocalConversationUIKit.podspec`)
+  - NERtcCallKit/NOS_Special (= 3.5.0)
+  - NERtcCallUIKit/NOS_Special (= 3.5.0)
+  - NERtcSDK/Nenn
+  - NERtcSDK/RtcBasic
+  - NERtcSDK/Segment
+  - NETeamUIKit (from `../NETeamUIKit/NETeamUIKit.podspec`)
+  - NIMSDK_LITE (= 10.9.76)
+  - YXLogin (= 1.1.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CocoaLumberjack
+    - LGAlertViewCY
+    - libwebp
+    - Masonry
+    - MJRefresh
+    - NEChatKit
+    - NECommonKit
+    - NECoreIM2Kit
+    - NECoreKit
+    - NERtcCallKit
+    - NERtcCallUIKit
+    - NERtcSDK
+    - NIMSDK_LITE
+    - ReactiveObjC
+    - SDWebImage
+    - SDWebImageSVGKitPlugin
+    - SDWebImageWebPCoder
+    - SPPageMenu
+    - SVGKit
+    - Toast
+    - YXAlog
+    - YXArtemis_XCFramework
+    - YXLogin
+    - YYModel
+
+EXTERNAL SOURCES:
+  NEChatUIKit:
+    :path: "../NEChatUIKit/NEChatUIKit.podspec"
+  NECommonUIKit:
+    :path: "../NECommonUIKit/NECommonUIKit.podspec"
+  NEContactUIKit:
+    :path: "../NEContactUIKit/NEContactUIKit.podspec"
+  NELocalConversationUIKit:
+    :path: "../NELocalConversationUIKit/NELocalConversationUIKit.podspec"
+  NETeamUIKit:
+    :path: "../NETeamUIKit/NETeamUIKit.podspec"
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 5644158777912b7de7469fa881f8a3f259c2512a
+  LGAlertViewCY: 3355db1c36b03fbab0d242cae51f4e0adf0e1939
+  libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: ff9e531227924c84ce459338414550a05d2aea78
+  NEChatKit: ace4edaf3af908939fae59458cd66ed76b551130
+  NEChatUIKit: 4542ec825a00dc784e23b77aed41b0acef154c4f
+  NECommonKit: c5bcd29251d9e637fe0ce9b928c9664698380e77
+  NECommonUIKit: fb1b94b9d0ebd5e0c9bea47177dde69dec9ed429
+  NEContactUIKit: 43d25c775529fc1e957a5e93117af78a15e8396a
+  NECoreIM2Kit: 1cfd31df43dc305d64d9c7a1625679ebae2a1fb4
+  NECoreKit: 8c6e2c3b89779b82548a392ae192c436e55b1df2
+  NELocalConversationUIKit: cb6741fad2b785a4d5df8f75988c8d45fa929cbb
+  NERtcCallKit: 2131e6401f37c1a8726d340afa4427b4fee46a35
+  NERtcCallUIKit: f5bdbf3d2893fcff31b6941682a7ee69ba858031
+  NERtcSDK: 14dd36743c4c1382d228ba4c54827ff3c6d914c2
+  NETeamUIKit: fb7723b992901d28d23a7108d9e09e6b43e6d508
+  NIMSDK_LITE: 23ec9722b58cf4cdc44c67f866613e59f9d63694
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf
+  SDWebImageSVGKitPlugin: 7542dd07c344ec3415ded0461a1161a6f087e0c9
+  SDWebImageWebPCoder: 0e06e365080397465cc73a7a9b472d8a3bd0f377
+  SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
+  Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
+  YXAlog: 02cad3f1e942bed69a95ff4ddbf41e4ee9d713bf
+  YXArtemis_XCFramework: d9a8b9439d7a6c757ed00ada53a6d2dd9b13f9c7
+  YXLogin: bd7c988db73f878ca3bd33d5210fc871781efdaa
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: e9455a64a0391be5454d580904ba0301cce47d96
+
+COCOAPODS: 1.13.0

@@ -1,0 +1,39 @@
+{
+  "name": "NELocalConversationUIKit",
+  "version": "10.9.10",
+  "summary": "Netease XKit",
+  "homepage": "http://netease.im",
+  "license": {
+    "type": "Copyright",
+    "text": " Copyright 2022 Netease "
+  },
+  "authors": "yunxin engineering department",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "swift_versions": "5.0",
+  "source": {
+    "git": "",
+    "tag": "10.9.10"
+  },
+  "source_files": "NELocalConversationUIKit/Classes/**/*",
+  "resources": "NELocalConversationUIKit/Assets/**/*",
+  "pod_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
+    "BUILD_LIBRARY_FOR_DISTRIBUTION": "YES",
+    "APPLICATION_EXTENSION_API_ONLY": "NO",
+    "DEBUG_INFORMATION_FORMAT": "dwarf-with-dsym"
+  },
+  "dependencies": {
+    "NECommonUIKit": [
+
+    ],
+    "NEChatKit/NOS_Special": [
+
+    ],
+    "MJRefresh": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}
