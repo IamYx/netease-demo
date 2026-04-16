@@ -13,7 +13,7 @@ import 'package:nim_chatkit/im_kit_client.dart';
 
 class IMDemoConfig {
   //云信IM appKey
-  static const AppKey = '';
+  static const AppKey = '4727023efa991d31d61b3b32e819bd5b';
 
   //高德Android Key
   static const AMapAndroid = 'your amap android key';
