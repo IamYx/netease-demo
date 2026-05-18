@@ -1,0 +1,122 @@
+// Copyright (c) 2022 NetEase, Inc. All rights reserved.
+// Use of this source code is governed by a MIT license that can be
+// found in the LICENSE file.
+import groovy.json.JsonSlurper
+
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    // 华为推送
+    id "com.huawei.agconnect"
+}
+
+def flutterVersionCode = gradle.settings.ext.localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = gradle.settings.ext.localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0.0'
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('release.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+
+android {
+    compileSdk 35
+
+    namespace 'com.netease.yunxin.meeting'
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        applicationId "com.netease.yunxin.meeting"
+        minSdkVersion 21
+        targetSdkVersion 35
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        def configFile = file('./src/main/assets/xkit_server.config')
+        def parsedConfig = new JsonSlurper().parseText(configFile.text)
+        manifestPlaceholders = [
+                'deepLinkHost' : 'meeting.netease.im',
+                'deepLinkScheme' : 'nemeeting',
+                'vivoApiKey' : parsedConfig.mixPushConfig.android.vivoApiKey,
+                'vivoAppId' : parsedConfig.mixPushConfig.android.vivoAppId
+        ]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        release {
+            //  shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard_rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        profile {
+            initWith debug
+        }
+    }
+
+    packagingOptions {
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+    }
+
+    ndkVersion '26.3.11579264'
+}
+
+flutter {
+    source '../..'
+}
+
+repositories {
+    flatDir {
+        dirs 'aars'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+
+    implementation  'androidx.core:core-splashscreen:1.0.1'
+
+    // 小米推送
+    implementation (name: 'MiPush_SDK_Client_6_0_1-C_3rd', ext: 'aar')
+
+    // 华为推送
+    implementation 'com.huawei.hms:push:6.12.0.300'
+
+    // vivo推送
+    implementation (name: 'vivo_pushSDK_v3.0.0.4_484', ext: 'aar')
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+}

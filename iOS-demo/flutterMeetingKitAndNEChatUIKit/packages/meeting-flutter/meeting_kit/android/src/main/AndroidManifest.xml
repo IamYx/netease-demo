@@ -1,0 +1,40 @@
+<!-- Copyright (c) 2022 NetEase, Inc. All rights reserved. -->
+<!-- Use of this source code is governed by a MIT license that can be -->
+<!-- found in the LICENSE file. -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+
+    <!-- Android 13需要此运行时权限，但对于前台 Service 可以不用申请 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- 通讯录读取 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application>
+
+        <!-- 解决高版本SDK(31以上)中不能访问系统SO库的问题：部分机型虚拟背景不生效 -->
+        <uses-native-library
+                android:name="libOpenCL.so"
+                android:required="false" />
+
+        <service
+            android:name=".foregroundservice.NEForegroundService"
+            android:enabled="true"
+            android:foregroundServiceType="mediaProjection|microphone"
+            android:exported="false">
+            <intent-filter><action android:name="com.netease.Yunxin.ScreenShare" /></intent-filter>
+        </service>
+
+    </application>
+
+
+</manifest>

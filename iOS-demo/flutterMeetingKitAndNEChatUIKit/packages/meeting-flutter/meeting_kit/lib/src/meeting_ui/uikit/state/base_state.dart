@@ -1,0 +1,59 @@
+// Copyright (c) 2022 NetEase, Inc. All rights reserved.
+// Use of this source code is governed by a MIT license that can be
+// found in the LICENSE file.
+
+part of meeting_ui;
+
+abstract class BaseState<T extends StatefulWidget> extends State<T>
+    with WidgetsBindingObserver {
+  late String tag;
+
+  @override
+  @mustCallSuper
+  void initState() {
+    tag = "$runtimeType@$hashCode";
+    Alog.i(tag: tag, moduleName: _moduleName, content: "$tag init state");
+    WidgetsBinding.instance.addObserver(this);
+    super.initState();
+  }
+
+  @override
+  @mustCallSuper
+  void dispose() {
+    Alog.i(tag: tag, moduleName: _moduleName, content: "$tag dispose");
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  @mustCallSuper
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+    Alog.i(
+        tag: tag, moduleName: _moduleName, content: "$tag ${state.toString()}");
+    onAppLifecycleState(state);
+  }
+
+  @protected
+  void onAppLifecycleState(AppLifecycleState state) {}
+
+  @protected
+  void cancelObserveWidgetsBinding() {
+    WidgetsBinding.instance.removeObserver(this);
+  }
+}
+
+mixin FirstBuildScope<T extends StatefulWidget> on State<T> {
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_firstBuild) {
+      _firstBuild = false;
+      onFirstBuild();
+    }
+  }
+
+  bool _firstBuild = true;
+  @protected
+  void onFirstBuild() {}
+}
