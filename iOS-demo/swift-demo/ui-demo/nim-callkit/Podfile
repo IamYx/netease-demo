@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '15.6'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'NIMSDKSwift' do
+  # Comment the next line if you don't want to use dynamic frameworks
+
+  use_frameworks!
+   pod 'NERtcCallKit', '4.8.7'
+   pod 'NERtcCallUIKit', '4.8.7'
+   pod 'NERtcSDK/RtcBasic'
+
+  # Xcode 27 要求 iOS 部署目标 >= 15.0，统一提升所有 Pod target，避免
+  # "The iOS deployment target ... range of supported deployment target versions is 15.0 to 27.0.x"
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.6'
+        # 允许 Pod 脚本阶段在 Xcode 27 下正常运行
+        config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
+      end
+    end
+  end
+
+end
